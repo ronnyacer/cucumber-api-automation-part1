@@ -49,6 +49,7 @@ jobs:
           ls -la artifacts || true
 
       - name: Upload report artifact to GitHub (optional)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ExtentReports
