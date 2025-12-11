@@ -34,12 +34,19 @@ jobs:
         run: |
           mkdir -p artifacts
           if [ -d "target/extent-report" ]; then
-            cd target && zip -r ../../artifacts/extent-report.zip extent-report
+            # zip the report folder into artifacts inside the workspace
+            zip -r artifacts/extent-report.zip target/extent-report
           else
             echo "Extent report folder missing!" > artifacts/extent-missing.txt
-            zip -r ../../artifacts/extent-report.zip artifacts || true
+            zip -r artifacts/extent-report.zip artifacts || true
           fi
         shell: bash
+
+      - name: Debug - list artifacts (verify zip exists)
+        run: |
+          echo "Workspace: $GITHUB_WORKSPACE"
+          ls -la .
+          ls -la artifacts || true
 
       - name: Upload report artifact to GitHub (optional)
         uses: actions/upload-artifact@v4
@@ -50,14 +57,12 @@ jobs:
       - name: Parse test counts summary (optional)
         id: summary
         run: |
-          # This is a simple example to sum tests/failures/skipped from surefire xmls
           PASSED=0; FAILED=0; SKIPPED=0
           for f in target/surefire-reports/*.xml; do
             if [ -f "$f" ]; then
               tests=$(xmllint --xpath 'string(//testsuite/@tests)' "$f" 2>/dev/null || echo 0)
               failures=$(xmllint --xpath 'string(//testsuite/@failures)' "$f" 2>/dev/null || echo 0)
               skipped=$(xmllint --xpath 'string(//testsuite/@skipped)' "$f" 2>/dev/null || echo 0)
-              # compute passed for this file (may need adjustments for multiple suites)
               passed=$(($tests - $failures - $skipped))
               PASSED=$(($PASSED + $passed))
               FAILED=$(($FAILED + $failures))
@@ -78,7 +83,6 @@ jobs:
           subject: "CI: Extent Report - ${{ github.repository }} #${{ github.run_number }} - ${{ job.status || 'COMPLETED' }}"
           to: ${{ secrets.EMAIL_TO }}
           from: ${{ secrets.EMAIL_FROM }}
-          # body supports multiline; include summary variables
           body: |
             Hello,
             
@@ -92,5 +96,4 @@ jobs:
             
             Regards,
             CI System
-          # attach the zip produced earlier (path relative to workspace)
           attachments: artifacts/extent-report.zip
