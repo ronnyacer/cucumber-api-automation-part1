@@ -25,20 +25,20 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
 
       - name: Build & Run Tests
-        run:  mvn -B "-Dtest=com.example.api.runners.TestNGRunnner" test
+        run:  mvn -B "-Dtest=com.example.api.runners.TestNGRunner" test
 
       - name: List extent report folder (debug)
-        run: ls -la target/extent-report || true
+        run: ls -la target/ExtentReports || true
 
       - name: Create report zip
         run: |
           mkdir -p artifacts
-          if [ -d "target/extent-report" ]; then
+          if [ -d "target/ExtentReports" ]; then
             # zip the report folder into artifacts inside the workspace
-            zip -r artifacts/extent-report.zip target/extent-report
+            zip -r artifacts/ExtentReports.zip target/ExtentReports
           else
             echo "Extent report folder missing!" > artifacts/extent-missing.txt
-            zip -r artifacts/extent-report.zip artifacts || true
+            zip -r artifacts/ExtentReports.zip artifacts || true
           fi
         shell: bash
 
@@ -51,8 +51,8 @@ jobs:
       - name: Upload report artifact to GitHub (optional)
         uses: actions/upload-artifact@v4
         with:
-          name: extent-report
-          path: artifacts/extent-report.zip
+          name: ExtentReports
+          path: artifacts/ExtentReports.zip
 
       - name: Parse test counts summary (optional)
         id: summary
@@ -92,8 +92,8 @@ jobs:
             - Failed: ${{ steps.summary.outputs.failed }}
             - Skipped: ${{ steps.summary.outputs.skipped }}
             
-            The Extent Report is attached to this email as extent-report.zip.
+            The Extent Report is attached to this email as ExtentReports.zip.
             
             Regards,
             CI System
-          attachments: artifacts/extent-report.zip
+          attachments: artifacts/ExtentReports.zip
