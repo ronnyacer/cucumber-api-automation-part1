@@ -1,0 +1,96 @@
+name: CI - Tests & Send Extent Report
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test-and-email-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+
+      - name: Build & Run Tests
+        run:  mvn -B -Dtest=com.example.api.runners.TestNGRunnner test
+
+      - name: List extent report folder (debug)
+        run: ls -la target/extent-report || true
+
+      - name: Create report zip
+        run: |
+          mkdir -p artifacts
+          if [ -d "target/extent-report" ]; then
+            cd target && zip -r ../../artifacts/extent-report.zip extent-report
+          else
+            echo "Extent report folder missing!" > artifacts/extent-missing.txt
+            zip -r ../../artifacts/extent-report.zip artifacts || true
+          fi
+        shell: bash
+
+      - name: Upload report artifact to GitHub (optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: extent-report
+          path: artifacts/extent-report.zip
+
+      - name: Parse test counts summary (optional)
+        id: summary
+        run: |
+          # This is a simple example to sum tests/failures/skipped from surefire xmls
+          PASSED=0; FAILED=0; SKIPPED=0
+          for f in target/surefire-reports/*.xml; do
+            if [ -f "$f" ]; then
+              tests=$(xmllint --xpath 'string(//testsuite/@tests)' "$f" 2>/dev/null || echo 0)
+              failures=$(xmllint --xpath 'string(//testsuite/@failures)' "$f" 2>/dev/null || echo 0)
+              skipped=$(xmllint --xpath 'string(//testsuite/@skipped)' "$f" 2>/dev/null || echo 0)
+              # compute passed for this file (may need adjustments for multiple suites)
+              passed=$(($tests - $failures - $skipped))
+              PASSED=$(($PASSED + $passed))
+              FAILED=$(($FAILED + $failures))
+              SKIPPED=$(($SKIPPED + $skipped))
+            fi
+          done
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+
+      - name: Send Extent Report by Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_HOST }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "CI: Extent Report - ${{ github.repository }} #${{ github.run_number }} - ${{ job.status || 'COMPLETED' }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_FROM }}
+          # body supports multiline; include summary variables
+          body: |
+            Hello,
+            
+            The test run for repository: ${{ github.repository }} (run #${{ github.run_number }}) has completed.
+            Summary:
+            - Passed: ${{ steps.summary.outputs.passed }}
+            - Failed: ${{ steps.summary.outputs.failed }}
+            - Skipped: ${{ steps.summary.outputs.skipped }}
+            
+            The Extent Report is attached to this email as extent-report.zip.
+            
+            Regards,
+            CI System
+          # attach the zip produced earlier (path relative to workspace)
+          attachments: artifacts/extent-report.zip

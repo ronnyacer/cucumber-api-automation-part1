@@ -1,0 +1,10 @@
+<Extent>
+    <Configuration>
+        <Theme>standard</Theme> <!-- or dark -->
+        <Encoding>utf-8</Encoding>
+        <Protocol>HTTPS</Protocol>
+        <DocumentTitle>API Automation Report</DocumentTitle>
+        <ReportName>RestAssured + Cucumber + TestNG</ReportName>
+        <DateFormat>yyyy-MM-dd HH:mm:ss</DateFormat>
+    </Configuration>
+</Extent>
