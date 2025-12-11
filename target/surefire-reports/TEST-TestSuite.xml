@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="5.593" tests="2" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\asres\IdeaProjects\cucumber-api-automation-part1\target\test-classes;C:\Users\asres\IdeaProjects\cucumber-api-automation-part1\target\classes;C:\Users\asres\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\asres\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\asres\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\asres\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\asres\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\asres\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\asres\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\asres\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\asres\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\asres\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\asres\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\asres\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\asres\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\asres\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\asres\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\asres\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\asres\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\asres\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\asres\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\asres\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\asres\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-testng\7.15.0\cucumber-testng-7.15.0.jar;C:\Users\asres\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\asres\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\asres\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\asres\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\asres\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\asres\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.7.0\extentreports-cucumber7-adapter-1.7.0.jar;C:\Users\asres\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\asres\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\asres\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\asres\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\asres\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\asres\.m2\repository\tech\grasshopper\extent-pdf-report\2.7.0\extent-pdf-report-2.7.0.jar;C:\Users\asres\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.10.0\cucumber-pdf-report-2.10.0.jar;C:\Users\asres\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\asres\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\asres\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\asres\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\asres\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\asres\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\asres\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\asres\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\asres\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.4.1\rest-assured-cucumber-pdf-report-1.4.1.jar;C:\Users\asres\.m2\repository\org\jsoup\jsoup\1.14.3\jsoup-1.14.3.jar;C:\Users\asres\.m2\repository\com\aventstack\klov-reporter\5.0.9\klov-reporter-5.0.9.jar;C:\Users\asres\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\asres\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\asres\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\asres\.m2\repository\tech\grasshopper\htmlextentreporter\1.0.1\htmlextentreporter-1.0.1.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Users\asres\.jdks\temurin-17.0.17\bin"/>
+    <property name="sun.java.command" value="C:\Users\asres\AppData\Local\Temp\surefire1243863744527562346\surefirebooter-20251211162420886_3.jar C:\Users\asres\AppData\Local\Temp\surefire1243863744527562346 2025-12-11T16-24-20_593-jvmRun1 surefire-20251211162420886_1tmp surefire_0-20251211162420886_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\asres\IdeaProjects\cucumber-api-automation-part1\target\test-classes;C:\Users\asres\IdeaProjects\cucumber-api-automation-part1\target\classes;C:\Users\asres\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\asres\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\asres\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\asres\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\asres\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\asres\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\asres\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\asres\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\asres\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\asres\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\asres\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\asres\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\asres\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\asres\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\asres\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\asres\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\asres\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\asres\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\asres\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\asres\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\asres\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\asres\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\asres\.m2\repository\io\cucumber\cucumber-testng\7.15.0\cucumber-testng-7.15.0.jar;C:\Users\asres\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\asres\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\asres\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\asres\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\asres\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\asres\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.7.0\extentreports-cucumber7-adapter-1.7.0.jar;C:\Users\asres\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\asres\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\asres\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\asres\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\asres\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\asres\.m2\repository\tech\grasshopper\extent-pdf-report\2.7.0\extent-pdf-report-2.7.0.jar;C:\Users\asres\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.10.0\cucumber-pdf-report-2.10.0.jar;C:\Users\asres\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\asres\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\asres\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\asres\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\asres\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\asres\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\asres\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\asres\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\asres\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.4.1\rest-assured-cucumber-pdf-report-1.4.1.jar;C:\Users\asres\.m2\repository\org\jsoup\jsoup\1.14.3\jsoup-1.14.3.jar;C:\Users\asres\.m2\repository\com\aventstack\klov-reporter\5.0.9\klov-reporter-5.0.9.jar;C:\Users\asres\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\asres\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\asres\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\asres\.m2\repository\tech\grasshopper\htmlextentreporter\1.0.1\htmlextentreporter-1.0.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\asres"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Users\asres\.jdks\temurin-17.0.17"/>
+    <property name="file.separator" value="\"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="C:\Users\asres\IdeaProjects\cucumber-api-automation-part1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\asres\AppData\Local\Temp\surefire1243863744527562346\surefirebooter-20251211162420886_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.17+10"/>
+    <property name="user.name" value="asres"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.17+10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.2.5\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="localRepository" value="C:\Users\asres\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\asres\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2025.2.5"/>
+    <property name="java.version" value="17.0.17"/>
+    <property name="user.dir" value="C:\Users\asres\IdeaProjects\cucumber-api-automation-part1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\asres\.jdks\temurin-17.0.17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Maven\apache-maven-3.9.11\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\asres\AppData\Local\Microsoft\WindowsApps;;C:\Maven\apache-maven-3.9.6\bin;C:\Users\asres\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.17+10"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="C:\Users\asres\.m2\repository"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;Create a new user&quot;, &quot;User API tests&quot;](1)" classname="com.example.api.runners.TestNGRunner" time="2.866">
+    <system-out><![CDATA[
+@smoke
+Scenario: Create a new user                                        # src/test/resources/features/user.feature:4
+  Given the API is available                                       # com.example.api.steps.UserSteps.theAPIIsAvailable()
+  And I load the input file "createUser.json"                      # com.example.api.steps.UserSteps.iLoadTheInputFile(java.lang.String)
+Request method:	POST
+Request URI:	https://reqres.in/api/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		x-api-key=reqres_297a9f22665746269470524208b2ee0d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "John Doe1",
+    "job": "Developer"
+}
+  When I send "POST" request to "/users"                           # com.example.api.steps.UserSteps.iSendRequestTo(java.lang.String,java.lang.String)
+HTTP/1.1 201 Created
+Date: Thu, 11 Dec 2025 10:54:25 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 88
+Connection: keep-alive
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Allow-Origin: http://localhost:5173
+Etag: W/"58-5Bs6khQSM7ceRRi4OYMb4N7J2rM"
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Referrer-Policy: strict-origin-when-cross-origin
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=OCFXxNvWrNl7cdZE9td8ANLWtcs%2Fj%2F8dIH51D6Gj0GI%3D\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\u0026ts=1765450465"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=OCFXxNvWrNl7cdZE9td8ANLWtcs%2Fj%2F8dIH51D6Gj0GI%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1765450465"
+Server: cloudflare
+Vary: Origin
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 99
+X-Ratelimit-Reset: 1765450526
+X-Request-Id: 22f43189-98c4-c63b-cc82-8c84041fc84d
+X-Xss-Protection: 1; mode=block
+cf-cache-status: DYNAMIC
+CF-RAY: 9ac4719d5d2847b8-BOM
+
+{
+    "name": "John Doe1",
+    "job": "Developer",
+    "id": "281",
+    "createdAt": "2025-12-11T10:54:25.138Z"
+}
+  Then the response status should be 201                           # com.example.api.steps.UserSteps.theResponseStatusShouldBe(int)
+  Then the response should match "createUser.json" ignoring fields # com.example.api.steps.UserSteps.theResponseShouldMatchIgnoringFields(java.lang.String,io.cucumber.datatable.DataTable)
+    | id        |
+    | createdAt |
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Create a new user&quot;, &quot;User API tests&quot;](2)" classname="com.example.api.runners.TestNGRunner" time="0.625">
+    <failure message="Step [the response should match {string} ignoring fields] is defined with 2 parameters at &apos;com.example.api.steps.UserSteps.theResponseShouldMatchIgnoringFields(java.lang.String,io.cucumber.datatable.DataTable)&apos;.&#10;However, the gherkin step has 1 arguments:&#10; * &quot;createUser1.json&quot;&#10;Step text: the response should match &quot;createUser1.json&quot; ignoring fields" type="io.cucumber.core.exception.CucumberException"><![CDATA[io.cucumber.core.exception.CucumberException: 
+Step [the response should match {string} ignoring fields] is defined with 2 parameters at 'com.example.api.steps.UserSteps.theResponseShouldMatchIgnoringFields(java.lang.String,io.cucumber.datatable.DataTable)'.
+However, the gherkin step has 1 arguments:
+ * "createUser1.json"
+Step text: the response should match "createUser1.json" ignoring fields
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:83)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+]]></failure>
+    <system-out><![CDATA[
+@smoke
+Scenario: Create a new user                                         # src/test/resources/features/user.feature:13
+  Given the API is available                                        # com.example.api.steps.UserSteps.theAPIIsAvailable()
+  And I load the input file "createUser1.json"                      # com.example.api.steps.UserSteps.iLoadTheInputFile(java.lang.String)
+Request method:	POST
+Request URI:	https://reqres.in/api/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		x-api-key=reqres_297a9f22665746269470524208b2ee0d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "John Doe2",
+    "job": "Developer"
+}
+  When I send "POST" request to "/users"                            # com.example.api.steps.UserSteps.iSendRequestTo(java.lang.String,java.lang.String)
+HTTP/1.1 201 Created
+Date: Thu, 11 Dec 2025 10:54:25 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 88
+Connection: keep-alive
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Allow-Origin: http://localhost:5173
+Etag: W/"58-6L7XU9zwmUeHjRUs6zpiDT+secY"
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Referrer-Policy: strict-origin-when-cross-origin
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=OCFXxNvWrNl7cdZE9td8ANLWtcs%2Fj%2F8dIH51D6Gj0GI%3D\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\u0026ts=1765450465"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=OCFXxNvWrNl7cdZE9td8ANLWtcs%2Fj%2F8dIH51D6Gj0GI%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1765450465"
+Server: cloudflare
+Vary: Origin
+Via: 1.1 heroku-router
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 1765450526
+X-Request-Id: 82ca4e6b-d303-e30f-592d-1faf254c9cc3
+X-Xss-Protection: 1; mode=block
+cf-cache-status: DYNAMIC
+CF-RAY: 9ac471a27ed1ff72-BOM
+
+{
+    "name": "John Doe2",
+    "job": "Developer",
+    "id": "232",
+    "createdAt": "2025-12-11T10:54:25.917Z"
+}
+  Then the response status should be 201                            # com.example.api.steps.UserSteps.theResponseStatusShouldBe(int)
+  Then the response should match "createUser1.json" ignoring fields # com.example.api.steps.UserSteps.theResponseShouldMatchIgnoringFields(java.lang.String,io.cucumber.datatable.DataTable)
+      io.cucumber.core.exception.CucumberException: Step [the response should match {string} ignoring fields] is defined with 2 parameters at 'com.example.api.steps.UserSteps.theResponseShouldMatchIgnoringFields(java.lang.String,io.cucumber.datatable.DataTable)'.
+However, the gherkin step has 1 arguments:
+ * "createUser1.json"
+Step text: the response should match "createUser1.json" ignoring fields
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:83)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+]]></system-out>
+  </testcase>
+</testsuite>

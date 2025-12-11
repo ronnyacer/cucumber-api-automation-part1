@@ -1,0 +1,4 @@
+com\example\api\utils\ResourceUtils.class
+com\example\api\runners\TestNGRunner.class
+com\example\api\steps\UserSteps.class
+com\example\api\hooks\Hooks.class

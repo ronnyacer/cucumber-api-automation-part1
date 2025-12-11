@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>standard</theme>       <!-- or dark -->
+        <encoding>utf-8</encoding>
+        <protocol>HTTPS</protocol>
+        <documentTitle>API Automation Report</documentTitle>
+        <reportName>RestAssured + Cucumber + TestNG</reportName>
+        <timeStampFormat>yyyy-MM-dd HH:mm:ss</timeStampFormat>
+    </configuration>
+</extentreports>
