@@ -7,6 +7,8 @@ Feature: User API tests
     When I send "POST" request to "/users"
     Then the response status should be 201
     Then the response should match "createUser.json" ignoring fields
+      | id |
+      | createdAt |
 
   Scenario: Create a new user
     Given the API is available
@@ -14,4 +16,3 @@ Feature: User API tests
     When I send "POST" request to "/users"
     Then the response status should be 201
     Then the response should match "createUser1.json" ignoring fields
-
