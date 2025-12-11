@@ -25,7 +25,7 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
 
       - name: Build & Run Tests
-        run:  mvn -B -Dtest=com.example.api.runners.TestNGRunnner test
+        run:  mvn -B "-Dtest=com.example.api.runners.TestNGRunnner" test
 
       - name: List extent report folder (debug)
         run: ls -la target/extent-report || true
