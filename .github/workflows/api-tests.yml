@@ -24,6 +24,27 @@ jobs:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
 
+      - name: Merge Secrets into configuring properties
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          TARGET=src/test/resources/config.properties
+          mkdir -p "$(dirname "$TARGET")"
+          touch "$TARGET"
+
+          awk -v api_key="$API_KEY" '
+            BEGIN { found_key=0 }
+            /^api\.key=/ {
+              print "api.key=" api_key
+              found_key=1
+              next
+            }
+            { print }
+            END {
+              if (!found_key) print "api.key=" api_key
+            }
+          ' "$TARGET" > "$TARGET".tmp && mv "$TARGET".tmp "$TARGET"    
+
       - name: Build & Run Tests
         run:  mvn -B "-Dtest=com.example.api.runners.TestNGRunner" test
 
