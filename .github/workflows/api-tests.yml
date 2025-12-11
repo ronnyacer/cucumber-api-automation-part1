@@ -28,9 +28,11 @@ jobs:
         run:  mvn -B "-Dtest=com.example.api.runners.TestNGRunner" test
 
       - name: List extent report folder (debug)
+        if: always()
         run: ls -la target/ExtentReports || true
 
       - name: Create report zip
+        if: always()
         run: |
           mkdir -p artifacts
           if [ -d "target/ExtentReports" ]; then
@@ -43,6 +45,7 @@ jobs:
         shell: bash
 
       - name: Debug - list artifacts (verify zip exists)
+        if: always()
         run: |
           echo "Workspace: $GITHUB_WORKSPACE"
           ls -la .
