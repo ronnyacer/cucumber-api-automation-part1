@@ -99,6 +99,7 @@ jobs:
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
       - name: Send Extent Report by Email
+        if: always()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_HOST }}
